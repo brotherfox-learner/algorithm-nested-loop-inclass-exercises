@@ -7,6 +7,20 @@
 */
 
 // Start coding here
+const multiplyByTwo = (matrix) =>{
+  const newArr = []
+  for(let i = 0; i < matrix.length; i ++){
+    for(let num of matrix[i]){
+      newArr.push(num*2)
+    }
+  }
+  return newArr
+}
+
+//Refactor use built in
+const multiplyByTwo2 = (matrix) =>{
+  return matrix.flat(Infinity).map(e=>e*2)
+}
 
 const matrix = [
   [11, 22],

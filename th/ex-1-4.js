@@ -14,6 +14,17 @@ const studentsInfo = [
   { name: "Ethan", age: 13, classNumber: 7, favoriteSubject: "Art" },
 ];
 
+const showStudentsData = (studentsInfo) => {
+  let msg = "";
+  for (let student of studentsInfo) {
+    for (let key in student) {
+      msg += key + ": " + student[key] + "\n";
+    }
+    msg += "-------------------\n";
+  }
+  return msg;
+};
+
 console.log(showStudentsData(studentsInfo));
 
 /*

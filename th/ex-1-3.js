@@ -7,8 +7,26 @@
 */
 
 // Start coding here
+const generatePattern = (num) =>{
+    let pattern = ''
+    for(let i = num; i > 0; i--){
+        for(let j = i; j > 0; j--){
+            pattern += '*'
+        } pattern += '\n'
+    }
+    return pattern
+}
 
-console.log(generatePattern(3)); 
+//Refactor use built in
+const generatePattern2 = (num) =>{
+    let pattern = ''
+    for(let i = num; i > 0; i--){
+            pattern += '*'.repeat(i) + '\n'
+        }
+    return pattern
+}
+
+console.log(generatePattern2(3)); 
 
 /* 
 
