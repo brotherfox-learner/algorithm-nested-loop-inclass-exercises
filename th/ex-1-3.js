@@ -11,7 +11,7 @@ const generatePattern = (num) =>{
     let pattern = ''
     for(let i = num; i > 0; i--){
         for(let j = i; j > 0; j--){
-            pattern += '*'
+            pattern += '* '
         } pattern += '\n'
     }
     return pattern
@@ -21,12 +21,28 @@ const generatePattern = (num) =>{
 const generatePattern2 = (num) =>{
     let pattern = ''
     for(let i = num; i > 0; i--){
-            pattern += '*'.repeat(i) + '\n'
+            pattern += '* '.repeat(i) + '\n'
         }
     return pattern
 }
 
-console.log(generatePattern2(3)); 
+const generatePattern3 = (size) =>{
+    let pattern = ''
+    for(let i = 1; i <= size; i++){
+        let row = ''
+        for(let j = 1; j <= size; j++){
+            if(i<=j){
+                row += '* '
+            } else{
+                row += '  '
+            }
+        } pattern += row + '\n'
+    }
+return pattern
+}
+
+
+console.log(generatePattern(3)); 
 
 /* 
 
@@ -37,7 +53,7 @@ console.log(generatePattern2(3));
 */ 
 
 
-console.log(generatePattern(5)); 
+// console.log(generatePattern(5)); 
 
 /*
 
